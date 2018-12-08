@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- META TAGS-->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, user-scalable=0">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <!-- TITLE-->
+    <title>DuniaPay - Payment</title>
+    <!-- FAVICON-->
+    <link rel="apple-touch-icon" sizes="60x60" href="./icon/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="./icon/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="./icon/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="./icon/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="./icon/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="./icon/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="./icon/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="./icon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="./icon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./icon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="./icon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./icon/favicon-16x16.png">
+    <link rel="manifest" href="./icon/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="./icon/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+    <!-- STYLE :: START-->
+    <link rel="stylesheet" href="css/vendor.css">
+    <link rel="stylesheet" href="css/app.css">
+    <link rel="stylesheet" href="css/card.css">
+
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="https://stripe.github.io/jquery.payment/lib/jquery.payment.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js"></script>
+
+    <!-- STYLE :: END--><!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+  </head>
+  <body>
+    <!-- HEADER :: START-->
+    <header class="header" id="header">
+      <div class="header__wrapper">
+        <div class="header__col header__col-0">
+          <div class="logo logo--header"><a class="logo__link" href="/" title="">
+              <svg class="icon-svg icon-logo ">
+                <use xlink:href="./img/sprite.svg#logo"></use>
+              </svg></a></div>
+        </div>
+        <div class="header__col header__col-1">
+          <div class="logo logo--subheader"><a class="logo__link" href="/" title="">
+              <div class="logo__svg-wrap">
+                <svg class="icon-svg icon-team ">
+                  <use xlink:href="./img/sprite.svg#team"></use>
+                </svg>
+              </div>
+              <p class="logo__text">DuniaPay</p></a></div>
+        </div>
+        <div class="header__col header__col-2"></div>
+        <div class="header__col header__col-3">
+          <div class="header__col-left"><a class="header__notify is-notify" href="#" title="">
+              <svg class="icon-svg icon-notification ">
+                <use xlink:href="./img/sprite.svg#notification"></use>
+              </svg></a></div>
+          <div class="header__col-right">
+            <div class="header__profile">
+              <div class="header__profile-left">
+                <p class="header__profile-name">Hello, <span>Patryk</span></p>
+              </div>
+              <div class="header__profile-right"><a class="header__profile-img" href="#" title=""><img src="./img/img-user.png" srcset="./img/img-user@2x.png 2x" alt="" title=""></a>
+                <svg class="icon-svg icon-arrow ">
+                  <use xlink:href="./img/sprite.svg#arrow"></use>
+                </svg>
+                <div class="header__profile-drop"><span></span>
+                  <div>
+                    <ul>
+                      <li><a href="#" title="">Profile</a></li>
+                      <li><a href="#" title="">Log out</a></li>
+                      <li><a href="#" title="">Setting</a></li>
+                      <li><a href="#" title="">Help</a></li>
+                      <li><a href="#" title="">Send feedback</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <!-- HEADER :: END-->
+    <!-- ASIDE :: START-->
+    <aside class="aside" id="aside">
+      <div class="aside__wrapper">
+        <div class="aside__nav">
+          <ul class="aside__nav-list">
+            <li class="aside__nav-item"><a class="aside__nav-link is-active" href="#" title="">
+                <svg class="icon-svg icon-calendar ">
+                  <use xlink:href="./img/sprite.svg#calendar"></use>
+                </svg></a></li>
+            <li class="aside__nav-item"><a class="aside__nav-link" href="#" title="">
+                <svg class="icon-svg icon-messages ">
+                  <use xlink:href="./img/sprite.svg#messages"></use>
+                </svg></a></li>
+            <!--li.aside__nav-item-->
+            <!--  a.aside__nav-link(href="#" class="" title="")-->
+            <!--    +iconSVG('users')-->
+          </ul>
+        </div>
+        <div class="aside__menu"><a class="aside__menu-btn" href="#" title="">
+            <div><span></span></div></a></div>
+      </div>
+    </aside>
+    <!-- ASIDE :: END-->
+    <!-- SECTION SIDEBAR :: START-->
+    <section class="sidebar" id="sidebar">
+      <div class="sidebar__wrapper">
+        <div class="sidebar__nav">
+          <ul class="sidebar__nav-list">
+            <li class="sidebar__nav-item"><a class="sidebar__nav-link is-active" href="#" title="">Home</a></li>
+            <li class="sidebar__nav-item"><a class="sidebar__nav-link" href="#" title="">Dashboard</a></li>
+            <li class="sidebar__nav-item"><a class="sidebar__nav-link" href="#" title="">History</a></li>
+            <li class="sidebar__nav-item"><a class="sidebar__nav-link" href="#" title="">Setting</a></li>
+          </ul>
+        </div>
+        <div class="sidebar__info"><a class="sidebar__info-btn" href="#" title="">Hide</a></div>
+      </div>
+    </section>
+    <!-- SECTION SIDEBAR :: END-->
+    <div class="body body--start p-payment">
+      <div class="wrapper">
+        <div class="wrapper__cover">
+          <main class="main" id="main">
+            <div class="section__wrapper">
+              <div class="section__title">
+                <p>Payment method</p>
+              </div>
+              <div class="section__scroll section__scroll--cvv">
+                <!-- SECTION CVV :: START-->
+                  <div class='checkout'>
+                      <div class='order'>
+                        <h2>Details</h2>
+                        <h5>Transfer Id #0101</h5>
+                        <ul class='order-list'>
+                            <li><h4>You send : <span class ="section_details">$110</span> </h4><h5>To : Serge Wilfried</h5></li>
+                            <li><h4>They receive : <span class ="section_details">75.000 CFA</span></h4><h5>1$ = 545,98756 CFA</h5></li>
+                            <li><h4>Your rate : $1 -> 565 CFA </h4></li>
+                        </ul>
+                        <h5>Fee</h5><h4>$ 9.50</h4>
+                        <h5 class='total'>Total</h5><h1>$ 167.50</h1>
+                      </div>
+                      <h2>Payment</h2>
+                      <div id='payment' class='payment'>
+                        <div class='card'>
+                          <div class='card-content'>
+                            <svg id='logo-visa' enable-background="new 0 0 50 70" height="70px" version="1.1" viewBox="0 0 50 50" width="70px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g><g><polygon clip-rule="evenodd" fill="#f4f5f9" fill-rule="evenodd" points="17.197,32.598 19.711,17.592 23.733,17.592     21.214,32.598   "/><path clip-rule="evenodd" d="M35.768,17.967c-0.797-0.287-2.053-0.621-3.596-0.621    c-3.977,0-6.752,2.029-6.776,4.945c-0.023,2.154,1.987,3.358,3.507,4.08c1.568,0.738,2.096,1.201,2.076,1.861    c0,1.018-1.238,1.471-2.395,1.471c-1.604,0-2.455-0.232-3.773-0.787l-0.53-0.248l-0.547,3.348    c0.929,0.441,2.659,0.789,4.462,0.811c4.217,0,6.943-2.012,6.979-5.135c0.025-1.692-1.053-2.999-3.369-4.071    c-1.393-0.685-2.246-1.134-2.246-1.844c0-0.645,0.723-1.306,2.295-1.306c1.314-0.024,2.268,0.271,3.002,0.58l0.365,0.167    L35.768,17.967z" fill="#f4f5f9" fill-rule="evenodd"/><path clip-rule="evenodd" d="M46.055,17.616h-3.102c-0.955,0-1.688,0.272-2.117,1.24    l-5.941,13.767h4.201c0,0,0.688-1.869,0.852-2.262c0.469,0,4.547,0,5.133,0c0.123,0.518,0.49,2.262,0.49,2.262h3.711    L46.055,17.616 M41.1,27.277c0.328-0.842,1.609-4.175,1.609-4.175c-0.041,0.043,0.328-0.871,0.529-1.43l0.256,1.281    c0,0,0.773,3.582,0.938,4.324H41.1z" fill="#f4f5f9" fill-rule="evenodd"/><path clip-rule="evenodd" d="M13.843,17.616L9.905,27.842l-0.404-2.076    c-0.948-2.467-2.836-4.634-5.53-6.163l3.564,12.995h4.243l6.312-14.982H13.843z" fill="#f4f5f9" fill-rule="evenodd"/><path clip-rule="evenodd" d="M7.232,17.174H0.755l-0.037,0.333    c5.014,1.242,8.358,4.237,9.742,7.841l-1.42-6.884C8.798,17.507,8.105,17.223,7.232,17.174L7.232,17.174z" fill="#f4f5f9" fill-rule="evenodd"/></g></g></svg>
+                            <h5>Card Number</h5>
+                            <h6 id='label-cardnumber'>0000 0000 0000 0000</h6>
+                            <h5>Expiration<span>CVC</span></h5>
+                            <h6 id='label-cardexpiration'>00 / 0000<span>000</span></h6>
+                          </div>
+                          <div class='wave'></div>
+                        </div>
+                        <div class='card-form'>
+                            <p class='field'>
+                            <svg id='i-cardfront' xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" viewBox="0 0 512 512" style="enable-background:new 0 0 28 28;" xml:space="preserve" width="28px" height="28px"><g>
+                              <path d="M471.5,88h-432C17.72,88,0,105.72,0,127.5v256C0,405.28,17.72,423,39.5,423h432c21.78,0,39.5-17.72,39.5-39.5v-256   C511,105.72,493.28,88,471.5,88z M496,383.5c0,13.509-10.991,24.5-24.5,24.5h-432C25.991,408,15,397.009,15,383.5v-256   c0-13.509,10.991-24.5,24.5-24.5h432c13.509,0,24.5,10.991,24.5,24.5V383.5z" fill="#dddfe6"/>
+                                <path d="M239.5,352h-176c-4.142,0-7.5,3.358-7.5,7.5s3.358,7.5,7.5,7.5h176c4.142,0,7.5-3.358,7.5-7.5S243.642,352,239.5,352z" fill="#dddfe6"/>
+                                <path d="M343.5,352h-72c-4.142,0-7.5,3.358-7.5,7.5s3.358,7.5,7.5,7.5h72c4.142,0,7.5-3.358,7.5-7.5S347.642,352,343.5,352z" fill="#dddfe6"/>
+                                <path d="M79.5,239h48c12.958,0,23.5-10.542,23.5-23.5v-32c0-12.958-10.542-23.5-23.5-23.5h-48C66.542,160,56,170.542,56,183.5v32   C56,228.458,66.542,239,79.5,239z M136,183.5v8.5h-8.5c-4.142,0-7.5,3.358-7.5,7.5s3.358,7.5,7.5,7.5h8.5v8.5   c0,4.687-3.813,8.5-8.5,8.5H111v-49h16.5C132.187,175,136,178.813,136,183.5z M79.5,175H96v49H79.5c-4.687,0-8.5-3.813-8.5-8.5V207   h8.5c4.142,0,7.5-3.358,7.5-7.5s-3.358-7.5-7.5-7.5H71v-8.5C71,178.813,74.813,175,79.5,175z" fill="#dddfe6"/>
+                                <path d="M63.5,319c4.142,0,7.5-3.358,7.5-7.5v-16c0-4.142-3.358-7.5-7.5-7.5s-7.5,3.358-7.5,7.5v16C56,315.642,59.358,319,63.5,319   z" fill="#dddfe6"/>
+                                <path d="M80,295.5v16c0,4.142,3.358,7.5,7.5,7.5s7.5-3.358,7.5-7.5v-16c0-4.142-3.358-7.5-7.5-7.5S80,291.358,80,295.5z" fill="#dddfe6"/>
+                                <path d="M104,295.5v16c0,4.142,3.358,7.5,7.5,7.5s7.5-3.358,7.5-7.5v-16c0-4.142-3.358-7.5-7.5-7.5S104,291.358,104,295.5z" fill="#dddfe6"/>
+                                <path d="M128,295.5v16c0,4.142,3.358,7.5,7.5,7.5s7.5-3.358,7.5-7.5v-16c0-4.142-3.358-7.5-7.5-7.5S128,291.358,128,295.5z" fill="#dddfe6"/>
+                                <path d="M167.5,319c4.142,0,7.5-3.358,7.5-7.5v-16c0-4.142-3.358-7.5-7.5-7.5s-7.5,3.358-7.5,7.5v16   C160,315.642,163.358,319,167.5,319z" fill="#dddfe6"/>
+                                <path d="M191.5,319c4.142,0,7.5-3.358,7.5-7.5v-16c0-4.142-3.358-7.5-7.5-7.5s-7.5,3.358-7.5,7.5v16   C184,315.642,187.358,319,191.5,319z" fill="#dddfe6"/>
+                                <path d="M215.5,319c4.142,0,7.5-3.358,7.5-7.5v-16c0-4.142-3.358-7.5-7.5-7.5s-7.5,3.358-7.5,7.5v16   C208,315.642,211.358,319,215.5,319z" fill="#dddfe6"/>
+                                <path d="M239.5,288c-4.142,0-7.5,3.358-7.5,7.5v16c0,4.142,3.358,7.5,7.5,7.5s7.5-3.358,7.5-7.5v-16   C247,291.358,243.642,288,239.5,288z" fill="#dddfe6"/>
+                                <path d="M271.5,319c4.142,0,7.5-3.358,7.5-7.5v-16c0-4.142-3.358-7.5-7.5-7.5s-7.5,3.358-7.5,7.5v16   C264,315.642,267.358,319,271.5,319z" fill="#dddfe6"/>
+                                <path d="M295.5,319c4.142,0,7.5-3.358,7.5-7.5v-16c0-4.142-3.358-7.5-7.5-7.5s-7.5,3.358-7.5,7.5v16   C288,315.642,291.358,319,295.5,319z" fill="#dddfe6"/>
+                                <path d="M319.5,319c4.142,0,7.5-3.358,7.5-7.5v-16c0-4.142-3.358-7.5-7.5-7.5s-7.5,3.358-7.5,7.5v16   C312,315.642,315.358,319,319.5,319z" fill="#dddfe6"/>
+                                <path d="M343.5,288c-4.142,0-7.5,3.358-7.5,7.5v16c0,4.142,3.358,7.5,7.5,7.5s7.5-3.358,7.5-7.5v-16   C351,291.358,347.642,288,343.5,288z" fill="#dddfe6"/>
+                                <path d="M375.5,288c-4.142,0-7.5,3.358-7.5,7.5v16c0,4.142,3.358,7.5,7.5,7.5s7.5-3.358,7.5-7.5v-16   C383,291.358,379.642,288,375.5,288z" fill="#dddfe6"/>
+                                <path d="M399.5,288c-4.142,0-7.5,3.358-7.5,7.5v16c0,4.142,3.358,7.5,7.5,7.5s7.5-3.358,7.5-7.5v-16   C407,291.358,403.642,288,399.5,288z" fill="#dddfe6"/>
+                                <path d="M423.5,288c-4.142,0-7.5,3.358-7.5,7.5v16c0,4.142,3.358,7.5,7.5,7.5s7.5-3.358,7.5-7.5v-16   C431,291.358,427.642,288,423.5,288z" fill="#dddfe6"/>
+                                <path d="M447.5,288c-4.142,0-7.5,3.358-7.5,7.5v16c0,4.142,3.358,7.5,7.5,7.5s7.5-3.358,7.5-7.5v-16   C455,291.358,451.642,288,447.5,288z" fill="#dddfe6"/>
+                                <path d="M415.5,160h-48c-21.78,0-39.5,17.72-39.5,39.5s17.72,39.5,39.5,39.5h48c21.78,0,39.5-17.72,39.5-39.5S437.28,160,415.5,160   z M415.5,224h-48c-13.509,0-24.5-10.991-24.5-24.5s10.991-24.5,24.5-24.5h48c13.509,0,24.5,10.991,24.5,24.5S429.009,224,415.5,224   z" fill="#dddfe6"/>
+                              </g>
+                            </svg>
+                            <input type='text' id='cardnumber' name='cardnumber' placeholder='1234 5678 9123 4567' pattern='\d*' title='Card Number' />
+                          </p>
+                            <p class='field space'>
+                              <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="i-calendar" x="0px" y="0px" viewBox="0 0 191.259 191.259" style="enable-background:new 0 0 191.259 191.259;" xml:space="preserve" width="28px" height="28px">
+                              <g>
+                                <circle cx="59.768" cy="83.634" r="3.985" fill="#dddfe6"/>
+                                <circle cx="83.676" cy="83.634" r="3.985" fill="#dddfe6"/>
+                              <circle cx="107.583" cy="83.634" r="3.985" fill="#dddfe6"/>
+                              <circle cx="35.861" cy="107.541" r="3.984" fill="#dddfe6"/>
+                              <circle cx="59.768" cy="107.541" r="3.984" fill="#dddfe6"/>
+                              <circle cx="83.676" cy="107.541" r="3.984" fill="#dddfe6"/>
+                              <circle cx="107.583" cy="107.541" r="3.984" fill="#dddfe6"/>
+                              <circle cx="155.398" cy="107.541" r="3.984" fill="#dddfe6"/>
+                              <circle cx="131.49" cy="83.634" r="3.985" fill="#dddfe6"/>
+                              <circle cx="155.398" cy="83.634" r="3.985" fill="#dddfe6"/>
+                              <circle cx="35.861" cy="131.449" r="3.985" fill="#dddfe6"/>
+                              <circle cx="59.768" cy="131.449" r="3.985" fill="#dddfe6"/>
+                              <circle cx="83.676" cy="131.449" r="3.985" fill="#dddfe6"/>
+                              <circle cx="107.583" cy="131.449" r="3.985" fill="#dddfe6"/>
+                              <circle cx="131.49" cy="131.449" r="3.985" fill="#dddfe6"/>
+                              <circle cx="155.398" cy="131.449" r="3.985" fill="#dddfe6"/>
+                              <circle cx="35.861" cy="155.356" r="3.985" fill="#dddfe6"/>
+                              <circle cx="59.768" cy="155.356" r="3.985" fill="#dddfe6"/>
+                              <circle cx="83.676" cy="155.356" r="3.985" fill="#dddfe6"/>
+                              <circle cx="107.583" cy="155.356" r="3.985" fill="#dddfe6"/>
+                                <path d="M131.49,119.495c6.603,0,11.954-5.351,11.954-11.954s-5.351-11.954-11.954-11.954   c-6.603,0-11.954,5.351-11.954,11.954S124.887,119.495,131.49,119.495z M131.49,103.557c2.199,0,3.985,1.786,3.985,3.984   s-1.786,3.984-3.985,3.984s-3.984-1.786-3.984-3.984S129.292,103.557,131.49,103.557z" fill="#dddfe6"/>
+                                <path d="M175.321,15.98h-7.969v-3.985c0-6.601-5.354-11.954-11.954-11.954   c-6.603,0-11.954,5.352-11.954,11.954v3.985h-95.63v-3.985c0-6.601-5.354-11.954-11.954-11.954   c-6.603,0-11.954,5.352-11.954,11.954v3.985h-7.969C7.136,15.98,0,23.116,0,31.918v15.854v7.969v119.537   c0,8.802,7.136,15.938,15.938,15.938h159.382c8.802,0,15.938-7.136,15.938-15.938V55.742v-7.969V31.918   C191.259,23.116,184.123,15.98,175.321,15.98z M151.413,23.949V15.98v-3.985c0-2.201,1.782-3.985,3.985-3.985   c2.198,0,3.984,1.784,3.984,3.985v3.985v7.969v3.984c0,2.2-1.786,3.985-3.984,3.985c-2.202,0-3.985-1.784-3.985-3.985V23.949z    M31.876,23.949V15.98v-3.985c0-2.201,1.782-3.985,3.985-3.985c2.199,0,3.985,1.784,3.985,3.985v3.985v7.969v3.984   c0,2.2-1.786,3.985-3.985,3.985c-2.202,0-3.985-1.784-3.985-3.985V23.949z M183.29,175.279c0,4.399-3.564,7.969-7.969,7.969H15.938   c-4.405,0-7.969-3.57-7.969-7.969V55.742H183.29V175.279z M183.29,47.773H7.969V31.918c0-4.403,3.564-7.969,7.969-7.969h7.969   v3.984c0,6.601,5.35,11.954,11.954,11.954c6.6,0,11.954-5.352,11.954-11.954v-3.984h95.63v3.984c0,6.601,5.35,11.954,11.954,11.954   c6.599,0,11.954-5.352,11.954-11.954v-3.984h7.969c4.405,0,7.969,3.566,7.969,7.969V47.773z" fill="#dddfe6"/>
+                                </g>
+                              </svg>
+                              <input type='text' id='cardexpiration' name='cardexpiration' placeholder="MM / YYYY" pattern="\d*" title='Card Expiration Date' />
+                          </p>
+                            <p class='field'>
+                              <svg id='i-cardback' xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" viewBox="0 0 512 512" style="enable-background:new 0 0 28 28;" xml:space="preserve" width="28px" height="28px">
+                              <g>
+                                <path d="M63.5,288c-4.142,0-7.5,3.358-7.5,7.5v16c0,4.142,3.358,7.5,7.5,7.5s7.5-3.358,7.5-7.5v-16C71,291.358,67.642,288,63.5,288   z" fill="#dddfe6"/>
+                                <path d="M87.5,288c-4.142,0-7.5,3.358-7.5,7.5v16c0,4.142,3.358,7.5,7.5,7.5s7.5-3.358,7.5-7.5v-16C95,291.358,91.642,288,87.5,288   z" fill="#dddfe6"/>
+                                <path d="M111.5,288c-4.142,0-7.5,3.358-7.5,7.5v16c0,4.142,3.358,7.5,7.5,7.5s7.5-3.358,7.5-7.5v-16   C119,291.358,115.642,288,111.5,288z" fill="#dddfe6"/>
+                                <path d="M135.5,288c-4.142,0-7.5,3.358-7.5,7.5v16c0,4.142,3.358,7.5,7.5,7.5s7.5-3.358,7.5-7.5v-16   C143,291.358,139.642,288,135.5,288z" fill="#dddfe6"/>
+                                <path d="M167.5,319c4.142,0,7.5-3.358,7.5-7.5v-16c0-4.142-3.358-7.5-7.5-7.5s-7.5,3.358-7.5,7.5v16   C160,315.642,163.358,319,167.5,319z" fill="#dddfe6"/>
+                                <path d="M199,311.5v-16c0-4.142-3.358-7.5-7.5-7.5s-7.5,3.358-7.5,7.5v16c0,4.142,3.358,7.5,7.5,7.5S199,315.642,199,311.5z" fill="#dddfe6"/>
+                                <path d="M223,311.5v-16c0-4.142-3.358-7.5-7.5-7.5s-7.5,3.358-7.5,7.5v16c0,4.142,3.358,7.5,7.5,7.5S223,315.642,223,311.5z" fill="#dddfe6"/>
+                                <path d="M239.5,288c-4.142,0-7.5,3.358-7.5,7.5v16c0,4.142,3.358,7.5,7.5,7.5s7.5-3.358,7.5-7.5v-16   C247,291.358,243.642,288,239.5,288z" fill="#dddfe6"/>
+                                <path d="M271.5,319c4.142,0,7.5-3.358,7.5-7.5v-16c0-4.142-3.358-7.5-7.5-7.5s-7.5,3.358-7.5,7.5v16   C264,315.642,267.358,319,271.5,319z" fill="#dddfe6"/>
+                                <path d="M303,311.5v-16c0-4.142-3.358-7.5-7.5-7.5s-7.5,3.358-7.5,7.5v16c0,4.142,3.358,7.5,7.5,7.5S303,315.642,303,311.5z" fill="#dddfe6"/>
+                                <path d="M327,311.5v-16c0-4.142-3.358-7.5-7.5-7.5s-7.5,3.358-7.5,7.5v16c0,4.142,3.358,7.5,7.5,7.5S327,315.642,327,311.5z" fill="#dddfe6"/>
+                                <path d="M351,311.5v-16c0-4.142-3.358-7.5-7.5-7.5s-7.5,3.358-7.5,7.5v16c0,4.142,3.358,7.5,7.5,7.5S351,315.642,351,311.5z" fill="#dddfe6"/>
+                                <path d="M383,311.5v-16c0-4.142-3.358-7.5-7.5-7.5s-7.5,3.358-7.5,7.5v16c0,4.142,3.358,7.5,7.5,7.5S383,315.642,383,311.5z" fill="#dddfe6"/>
+                                <path d="M407,311.5v-16c0-4.142-3.358-7.5-7.5-7.5s-7.5,3.358-7.5,7.5v16c0,4.142,3.358,7.5,7.5,7.5S407,315.642,407,311.5z" fill="#dddfe6"/>
+                                <path d="M431,311.5v-16c0-4.142-3.358-7.5-7.5-7.5s-7.5,3.358-7.5,7.5v16c0,4.142,3.358,7.5,7.5,7.5S431,315.642,431,311.5z" fill="#dddfe6"/>
+                                <path d="M447.5,288c-4.142,0-7.5,3.358-7.5,7.5v16c0,4.142,3.358,7.5,7.5,7.5s7.5-3.358,7.5-7.5v-16   C455,291.358,451.642,288,447.5,288z" fill="#dddfe6"/>
+                                <path d="M447.5,216h-384C50.542,216,40,226.542,40,239.5v8c0,12.958,10.542,23.5,23.5,23.5h384c12.958,0,23.5-10.542,23.5-23.5v-8   C471,226.542,460.458,216,447.5,216z M456,247.5c0,4.687-3.813,8.5-8.5,8.5h-384c-4.687,0-8.5-3.813-8.5-8.5v-8   c0-4.687,3.813-8.5,8.5-8.5h384c4.687,0,8.5,3.813,8.5,8.5V247.5z" fill="#dddfe6"/>
+                                <path d="M447.5,352h-176c-4.142,0-7.5,3.358-7.5,7.5s3.358,7.5,7.5,7.5h176c4.142,0,7.5-3.358,7.5-7.5S451.642,352,447.5,352z" fill="#dddfe6"/>
+                                <path d="M239.5,352h-72c-4.142,0-7.5,3.358-7.5,7.5s3.358,7.5,7.5,7.5h72c4.142,0,7.5-3.358,7.5-7.5S243.642,352,239.5,352z" fill="#dddfe6"/>
+                                <path d="M511,159.498V127.5c0-21.78-17.72-39.5-39.5-39.5h-432C17.72,88,0,105.72,0,127.5v47.998c0,0.001,0,0.003,0,0.005V383.5   C0,405.28,17.72,423,39.5,423h432c21.78,0,39.5-17.72,39.5-39.5V159.502C511,159.501,511,159.499,511,159.498z M496,184h-6.394   l6.394-6.394V184z M449.606,184l41-41H496v13.394L468.394,184H449.606z M409.606,184l41-41h18.787l-41,41H409.606z M369.606,184   l41-41h18.787l-41,41H369.606z M329.606,184l41-41h18.787l-41,41H329.606z M289.606,184l41-41h18.787l-41,41H289.606z M249.606,184   l41-41h18.787l-41,41H249.606z M209.606,184l41-41h18.787l-41,41H209.606z M169.606,184l41-41h18.787l-41,41H169.606z M129.606,184   l41-41h18.787l-41,41H129.606z M89.606,184l41-41h18.787l-41,41H89.606z M49.606,184l41-41h18.787l-41,41H49.606z M15,184v-5.394   L50.606,143h18.787l-41,41H15z M15,143h14.394L15,157.394V143z M39.5,103h432c13.509,0,24.5,10.991,24.5,24.5v0.5h-8.497   c-0.002,0-0.003,0-0.005,0h-39.995c-0.002,0-0.003,0-0.005,0h-39.995c-0.002,0-0.003,0-0.005,0h-39.995c-0.002,0-0.003,0-0.005,0   h-39.995c-0.002,0-0.003,0-0.005,0h-39.995c-0.002,0-0.004,0-0.005,0h-39.995c-0.001,0-0.003,0-0.005,0h-39.995   c-0.001,0-0.003,0-0.005,0h-39.995c-0.001,0-0.003,0-0.005,0h-39.995c-0.001,0-0.003,0-0.005,0H87.502c-0.001,0-0.003,0-0.005,0   H47.502c-0.001,0-0.003,0-0.005,0H15v-0.5C15,113.991,25.991,103,39.5,103z M471.5,408h-432C25.991,408,15,397.009,15,383.5V199   h481v184.5C496,397.009,485.009,408,471.5,408z" fill="#dddfe6"/>
+                                </g>
+                              </svg>
+                              <input type='text' id='cardcvc' name='cardcvc' placeholder="123" pattern="\d*" title='CVC Code' />
+                          </p>
+                          <button class='button-cta' title='Confirm your purchase'><span>Pay</span></button>
+                        </div>
+                      </div>
+                      <div id='paid' class='paid'>
+                    <svg id='icon-paid' xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" viewBox="0 0 310.277 310.277" style="enable-background:new 0 0 310.277 310.277;" xml:space="preserve" width="180px" height="180px">
+                    <g> <path d="M155.139,0C69.598,0,0,69.598,0,155.139c0,85.547,69.598,155.139,155.139,155.139   c85.547,0,155.139-69.592,155.139-155.139C310.277,69.598,240.686,0,155.139,0z M144.177,196.567L90.571,142.96l8.437-8.437   l45.169,45.169l81.34-81.34l8.437,8.437L144.177,196.567z" fill="#3ac569"/>
+                    </g></svg>
+                    <h2>Your transfer has been completed.</h2>
+                    <h2>Thank you!</h2>
+                  </div>
+                </div>
+
+                <!-- SECTION CVV :: END-->
+              </div>
+            </div>
+          </main>
+          <div class='modal' style="display: none;">
+            <div class='header'>
+              Are you sure?
+            </div>
+            <div class='content'>
+              This is a pretty serious action you're about to take. You should think twice about this sort of thing.
+            </div>
+            <div class='actions'>
+              <a class='success' href='#'>Yes, do it</a>
+              <a href='#'>No, cancel</a>
+            </div>
+            <div class='loader-bar'>
+              <div class='bar'></div>
+            </div>
+          </div>
+          <section class="section" id="section">
+            <div class="section__wrapper">
+              <div class="section__title">
+                <p>My Profile</p>
+              </div>
+              <div class="section__scroll">
+                <!-- PROFILE :: START-->
+                <section class="profile" id="profile">
+                  <div class="profile__wrapper">
+                    <div class="profile__card">
+                      <div class="profile__card-img">
+                        <div><img src="./img/img-user.png" srcset="./img/img-user@2x.png 2x" alt="" title=""></div><a href="#" title="">
+                          <svg class="icon-svg icon-pencil ">
+                            <use xlink:href="./img/sprite.svg#pencil"></use>
+                          </svg></a>
+                      </div>
+                      <h2 class="profile__card-name">Patryk Pustół</h2><a class="profile__card-email" href="mailto:sasp@gmail.com">sasp@gmail.com</a><a class="profile__card-phone" href="tel:+1-873-353-7096">+1-873-353-7096</a>
+                      <p class="profile__card-address">Ottawa, Canada</p>
+                      <div class="profile__card-box">
+                        <div>
+                          <p>Invites</p><span>03</span>
+                        </div>
+                        <div>
+                          <p>Transactions</p><span><i></i>02</span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="profile__box profile__box-0">
+                      <div class="profile__box-top">
+                        <p class="profile__box-title">Payment mode</p>
+                        <svg class="icon-svg icon-star ">
+                          <use xlink:href="./img/sprite.svg#star"></use>
+                        </svg>
+                      </div>
+                      <div class="profile__box-middle">
+                        <p class="profile__box-name">Visa</p>
+                      </div>
+                      <div class="profile__box-bottom">
+                        <p class="profile__box-info">43xx-xxxx-xxxx-1564</p><a class="profile__box-btn" href="#" title="">Add new</a>
+                      </div>
+                    </div>
+                    <div class="profile__box profile__box-1">
+                      <div class="profile__box-top">
+                        <p class="profile__box-title">add payment mode</p>
+                      </div>
+                      <div class="profile__box-bottom"><a class="profile__box-btn" href="#" title="">Add new</a><a class="profile__box-btn" href="#" title="">Add new</a></div>
+                    </div>
+                  </div>
+                </section>
+                <!-- PROFILE :: END-->
+              </div>
+              <div class="section__row-bottom section__info">
+                <div class="section__info-wrapper">
+                  <div>
+                    <svg class="icon-svg icon-logo ">
+                      <use xlink:href="./img/sprite.svg#logo"></use>
+                    </svg>
+                  </div>
+                  <div>
+                    <p class="section__info-title"><span>Get a free transfer</span>
+                      <svg class="icon-svg icon-arrow-lg ">
+                        <use xlink:href="./img/sprite.svg#arrow-lg"></use>
+                      </svg>
+                    </p>
+                    <p class="section__info-description">Share with friends and<br>get your next transfer free</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+      </div>
+    </div>
+  </body>
+  <!-- DETAILS MODAL :: START-->
+  <div class="modal mfp-hide mfp-with-anim" id="personalDetails">
+      <form class="c-form c-form--details" action="" method="" autocomplete="off">
+        <div class="modal__header">
+          <p>personal Details</p>
+        </div>
+        <div class="modal__body">
+          <div class="c-form__group c-form__group--two">
+            <div class="c-form__group-col c-form__group-col-0">
+              <div class="c-form__field c-form__field--input">
+                <label class="c-form__label" for="first_name">first name</label>
+                <div class="c-form__input-wrapper">
+                  <input class="c-form__input" type="text" id="first_name" name="first_name" placeholder="Type your first name" value="" input-js="input-js"/>
+                </div>
+                <div class="c-form__notify">
+                </div>
+              </div>
+            </div>
+            <div class="c-form__group-col c-form__group-col-1">
+              <div class="c-form__field c-form__field--input">
+                <label class="c-form__label" for="last_name">last name</label>
+                <div class="c-form__input-wrapper">
+                  <input class="c-form__input" type="text" id="last_name" name="last_name" placeholder="Type your last name" value="" input-js="input-js"/>
+                </div>
+                <div class="c-form__notify">
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="c-form__group c-form__group--three">
+            <div class="c-form__group-col c-form__group-col-0">
+              <div class="c-form__field c-form__field--select">
+                <label class="c-form__label" for="select_birthday">birthday</label>
+                <div class="c-form__select-wrapper">
+                  <div class="c-form__select-value"></div>
+                  <select class="c-form__select" id="select_birthday" name="select_birthday" select-js="select-js">
+                    <option value="" disabled="disabled" selected="selected" hidden="hidden">Choose your birthday</option>
+                    <option value="Some option 1">Some option 1</option>
+                    <option value="Some option 2">Some option 2</option>
+                    <option value="Some option 3">Some option 3</option>
+                  </select>
+                  <div class="c-form__select-icon"><i></i></div>
+                </div>
+                <div class="c-form__notify">
+                </div>
+              </div>
+            </div>
+            <div class="c-form__group-col c-form__group-col-1">
+              <div class="c-form__field c-form__field--select">
+                <label class="c-form__label" for="select_gender">Gender</label>
+                <div class="c-form__select-wrapper">
+                  <div class="c-form__select-value"></div>
+                  <select class="c-form__select" id="select_gender" name="select_gender" select-js="select-js">
+                    <option value="" disabled="disabled" selected="selected" hidden="hidden">Choose your gender</option>
+                    <option value="Some option 1">Some option 1</option>
+                    <option value="Some option 2">Some option 2</option>
+                    <option value="Some option 3">Some option 3</option>
+                  </select>
+                  <div class="c-form__select-icon"><i></i></div>
+                </div>
+                <div class="c-form__notify">
+                </div>
+              </div>
+            </div>
+            <div class="c-form__group-col c-form__group-col-2">
+              <div class="c-form__field c-form__field--input">
+                <label class="c-form__label" for="mobile_number">mobile number</label>
+                <div class="c-form__input-wrapper">
+                  <input class="c-form__input" type="text" id="mobile_number" name="mobile_number" placeholder="+1 -343-853-7096" value="" input-js="input-js"/>
+                </div>
+                <div class="c-form__notify">
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="c-form__field c-form__field--input">
+            <label class="c-form__label" for="address">address</label>
+            <div class="c-form__input-wrapper">
+              <input class="c-form__input" type="text" id="address" name="address" placeholder="Type your address" value="" input-js="input-js"/>
+            </div>
+            <div class="c-form__notify">
+            </div>
+          </div>
+          <div class="c-form__group c-form__group--two">
+            <div class="c-form__group-col c-form__group-col-0">
+              <div class="c-form__field c-form__field--input">
+                <label class="c-form__label" for="city">city</label>
+                <div class="c-form__input-wrapper">
+                  <input class="c-form__input" type="text" id="city" name="city" placeholder="Type your city" value="" input-js="input-js"/>
+                </div>
+                <div class="c-form__notify">
+                </div>
+              </div>
+            </div>
+            <div class="c-form__group-col c-form__group-col-1">
+              <div class="c-form__field c-form__field--select">
+                <label class="c-form__label" for="select_state">State</label>
+                <div class="c-form__select-wrapper">
+                  <div class="c-form__select-value"></div>
+                  <select class="c-form__select" id="select_state" name="select_state" select-js="select-js">
+                    <option value="" disabled="disabled" selected="selected" hidden="hidden">Choose your state</option>
+                    <option value="Some option 1">Some option 1</option>
+                    <option value="Some option 2">Some option 2</option>
+                    <option value="Some option 3">Some option 3</option>
+                  </select>
+                  <div class="c-form__select-icon"><i></i></div>
+                </div>
+                <div class="c-form__notify">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="modal__footer">
+          <div class="c-form__field c-form__field--btn">
+            <button class="c-form__btn" type="submit">Continue</button>
+          </div>
+        </div>
+      </form>
+  </div>
+  <!-- DETAILS MODAL :: END-->
+  <!-- SCRIPT :: START-->
+  <script type="text/javascript" src="js/card.js"></script>
+
+  <script src="js/vendor.js"></script>
+  <script src="js/app.js"></script>
+  <!-- SCRIPT :: END-->
+</html>

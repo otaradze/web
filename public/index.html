@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- META TAGS-->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, user-scalable=0">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <!-- TITLE-->
+    <title>DuniaPay - Login</title>
+    <!-- FAVICON-->
+    <link rel="apple-touch-icon" sizes="60x60" href="./icon/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="./icon/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="./icon/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="./icon/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="./icon/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="./icon/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="./icon/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="./icon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="./icon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./icon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="./icon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./icon/favicon-16x16.png">
+    <link rel="manifest" href="./icon/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="./icon/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+    <!-- STYLE :: START-->
+    <link rel="stylesheet" href="css/vendor.css">
+    <link rel="stylesheet" href="css/app.css">
+
+    <script src="https://www.gstatic.com/firebasejs/5.6.0/firebase-app.js"></script>
+
+<script src="https://www.gstatic.com/firebasejs/5.6.0/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/5.6.0/firebase-firestore.js"></script>
+<script src="https://www.gstatic.com/firebasejs/5.6.0/firebase-messaging.js"></script>
+<script src="https://www.gstatic.com/firebasejs/5.6.0/firebase-functions.js"></script>
+
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyDM26vuM8otiSPTnbvBjoG1ndRW9vCXnFE",
+    authDomain: "beta-f34b2.firebaseapp.com",
+    databaseURL: "https://beta-f34b2.firebaseio.com",
+    projectId: "beta-f34b2",
+    storageBucket: "",
+    messagingSenderId: "403673897523"
+  };
+  firebase.initializeApp(config);
+</script>  
+
+    <!-- STYLE :: END--><!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+  </head>
+  <body>
+    <div class="body body--start p-home">
+      <section class="sign sign--login" id="sign">
+        <div class="sign__wrapper">
+          <div class="sign__wrapper-left"></div>
+          <div class="sign__wrapper-right">
+            <div class="sign__container">
+              <h1 class="sign__title">Hello!</h1>
+              <p class="sign__text">Sign in with your credentials or <br>create a new account</p>
+              <div class="c-form c-form--login" action="" method="" autocomplete="off">
+                <div class="c-form__field c-form__field--input">
+                  <div class="c-form__input-wrapper">
+                    <input class="c-form__input" type="email" id="email" name="email" autocomplete="username" placeholder="Email address" value="" input-js="input-js"/>
+                  </div>
+                  <div class="c-form__notify">
+                  </div>
+                </div>
+                <div class="c-form__field c-form__field--input">
+                  <div class="c-form__input-wrapper">
+                    <input class="c-form__input" type="password" id="password" name="password"  autocomplete="current-password" placeholder="Password" value="" input-js="input-js"/>
+                  </div>
+                  <div class="c-form__notify">
+                  </div>
+                </div>
+                <div class="c-form__group c-form__group--btnlink c-form__group--two">
+                  <div class="c-form__group-col c-form__group-col-0">
+                    <div class="c-form__field c-form__field--btn c-form__field--btn-login">
+                      <button class="c-form__btn" type="submit" id="disconnect">Login</button>
+                    </div>
+                  </div>
+                  <div class="c-form__group-col c-form__group-col-1">
+                    <div class="c-form__field c-form__field--link"><a class="c-form__link" href="/" title="">Forgot password?</a></div>
+                  </div>
+                </div>
+              </div>
+              <p class="sign__subtitle">Dont have an  account? <a href='register.html'>Create one</a></p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </body>
+  <script src="js/vendor.js"></script>
+  <script src="js/app.js"></script>
+  <script src="index.js"></script>
+  <script src="js/money.js"></script>
+
+
+  <!-- SCRIPT :: END-->
+</html>

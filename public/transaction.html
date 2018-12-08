@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- META TAGS-->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, user-scalable=0">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <!-- TITLE-->
+    <title>DuniaPay - Transaction</title>
+    <!-- FAVICON-->
+    <link rel="apple-touch-icon" sizes="60x60" href="./icon/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="./icon/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="./icon/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="./icon/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="./icon/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="./icon/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="./icon/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="./icon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="./icon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./icon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="./icon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./icon/favicon-16x16.png">
+    <link rel="manifest" href="./icon/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="./icon/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+    <!-- STYLE :: START-->
+    <link rel="stylesheet" href="css/vendor.css">
+    <link rel="stylesheet" href="css/app.css">
+    <!-- STYLE :: END--><!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+  </head>
+  <body>
+    <!-- HEADER :: START-->
+    <header class="header" id="header">
+      <div class="header__wrapper">
+        <div class="header__col header__col-0">
+          <div class="logo logo--header"><a class="logo__link" href="/" title="">
+              <svg class="icon-svg icon-logo ">
+                <use xlink:href="./img/sprite.svg#logo"></use>
+              </svg></a></div>
+        </div>
+        <div class="header__col header__col-1">
+          <div class="logo logo--subheader"><a class="logo__link" href="/" title="">
+              <div class="logo__svg-wrap">
+                <svg class="icon-svg icon-team ">
+                  <use xlink:href="./img/sprite.svg#team"></use>
+                </svg>
+              </div>
+              <p class="logo__text">DuniaPay</p></a></div>
+        </div>
+        <div class="header__col header__col-2"></div>
+        <div class="header__col header__col-3">
+          <div class="header__col-left"><a class="header__notify is-notify" href="#" title="">
+              <svg class="icon-svg icon-notification ">
+                <use xlink:href="./img/sprite.svg#notification"></use>
+              </svg></a></div>
+          <div class="header__col-right">
+            <div class="header__profile">
+              <div class="header__profile-left">
+                <p class="header__profile-name">Hello, <span>Patryk</span></p>
+              </div>
+              <div class="header__profile-right"><a class="header__profile-img" href="#" title=""><img src="./img/img-user.png" srcset="./img/img-user@2x.png 2x" alt="" title=""></a>
+                <svg class="icon-svg icon-arrow ">
+                  <use xlink:href="./img/sprite.svg#arrow"></use>
+                </svg>
+                <div class="header__profile-drop"><span></span>
+                  <div>
+                    <ul>
+                      <li><a href="#" title="">Profile</a></li>
+                      <li><a href="#" title="">Log out</a></li>
+                      <li><a href="#" title="">Setting</a></li>
+                      <li><a href="#" title="">Help</a></li>
+                      <li><a href="#" title="">Send feedback</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <!-- HEADER :: END-->
+    <!-- ASIDE :: START-->
+    <aside class="aside" id="aside">
+      <div class="aside__wrapper">
+        <div class="aside__nav">
+          <ul class="aside__nav-list">
+            <li class="aside__nav-item"><a class="aside__nav-link is-active" href="#" title="">
+                <svg class="icon-svg icon-calendar ">
+                  <use xlink:href="./img/sprite.svg#calendar"></use>
+                </svg></a></li>
+            <li class="aside__nav-item"><a class="aside__nav-link" href="#" title="">
+                <svg class="icon-svg icon-messages ">
+                  <use xlink:href="./img/sprite.svg#messages"></use>
+                </svg></a></li>
+            <!--li.aside__nav-item-->
+            <!--  a.aside__nav-link(href="#" class="" title="")-->
+            <!--    +iconSVG('users')-->
+          </ul>
+        </div>
+        <div class="aside__menu"><a class="aside__menu-btn" href="#" title="">
+            <div><span></span></div></a></div>
+      </div>
+    </aside>
+    <!-- ASIDE :: END-->
+    <!-- SECTION SIDEBAR :: START-->
+    <section class="sidebar" id="sidebar">
+      <div class="sidebar__wrapper">
+        <div class="sidebar__nav">
+          <ul class="sidebar__nav-list">
+            <li class="sidebar__nav-item"><a class="sidebar__nav-link is-active" href="#" title="">Home</a></li>
+            <li class="sidebar__nav-item"><a class="sidebar__nav-link" href="#" title="">Dashboard</a></li>
+            <li class="sidebar__nav-item"><a class="sidebar__nav-link" href="#" title="">History</a></li>
+            <li class="sidebar__nav-item"><a class="sidebar__nav-link" href="#" title="">Setting</a></li>
+          </ul>
+        </div>
+        <div class="sidebar__info"><a class="sidebar__info-btn" href="#" title="">Hide</a></div>
+      </div>
+    </section>
+    <!-- SECTION SIDEBAR :: END-->
+    <div class="body body--start p-transaction">
+      <div class="wrapper">
+        <div class="wrapper__cover">
+          <main class="main" id="main">
+            <div class="section__wrapper">
+              <div class="section__title">
+                <p>New transfer</p>
+              </div>
+              <div class="section__scroll section__scroll--transaction">
+                <!-- SECTION TRANSACTION :: START-->
+                <section class="transaction" id="transaction">
+                  <h1 class="transaction__title">your transaction detail</h1>
+                  <div class="transaction__box-wrapper">
+                    <div class="transaction__box transaction__box-0">
+                      <div class="transaction__box-title"><span>Today</span></div>
+                      <p class="transaction__box-subtitle">Your sending 225.000 XOF to ILBOUDO ARISTIDE</p>
+                      <div class="transaction__box-address">
+                        <p>Country : Burkina Faso</p>
+                        <p>Mobile : + 226 71 39 73 79</p>
+                      </div>
+                      <p class="transaction__box-rate">Your rate : 1 USD -> 585,375987 xof</p>
+                      <p class="transaction__box-rate">Fee : $4,99</p>
+                      <div class="transaction__box-btn-wrapper"><a class="transaction__box-btn transaction__box-btn--pay" href="#" title="">Confirm and pay</a><a class="transaction__box-btn transaction__box-btn--edit" href="#" title="">Edit</a></div>
+                    </div>
+                    <div class="transaction__box transaction__box-1">
+                      <div class="transaction__box-title"><span>Payment method</span></div>
+                      <p class="transaction__box-subtitle">Use this card ?</p>
+                      <p class="transaction__box-subtitle transaction__box-subtitle--color">Enter the ccv code to confirm</p><img class="transaction__box-img" src="./img/img-visa.png" srcset="./img/img-visa@2x.png 2x" alt="" title="">
+                      <div class="transaction__box-info">
+                        <div><span>43xx-xxxx-xxxx-1564</span></div>
+                        <div><span>CVV</span></div>
+                      </div>
+                      <div class="transaction__box-btn-wrapper"><a class="transaction__box-btn transaction__box-btn--pay" href="#" title="">Pay</a><a class="transaction__box-btn transaction__box-btn--new" href="#" title="">Add new</a></div>
+                    </div>
+                  </div>
+                </section>
+                <!-- SECTION TRANSACTION :: END--><a class="section__btn" href="#personalDetails" data-effect="mfp-zoom-in" popup-js>
+                  <svg class="icon-svg icon-plus ">
+                    <use xlink:href="./img/sprite.svg#plus"></use>
+                  </svg></a>
+              </div>
+            </div>
+          </main>
+          <section class="section" id="section">
+            <div class="section__wrapper">
+              <div class="section__title">
+                <p>Contacts list</p>
+              </div>
+              <div class="section__scroll">
+                <!-- SECTION INFO :: START-->
+                <section class="info" id="info">
+                  <div class="info__box info__box-0">
+                    <div class="info__box-left">
+                      <div class="info__box-top">
+                        <p class="info__box-title">Serge Wilfried</p>
+                        <p class="info__box-subtitle">USA - Houston</p>
+                      </div>
+                      <div class="info__box-bottom">
+                        <p class="info__box-mobile">mobile : +1-873-7096</p>
+                      </div>
+                    </div>
+                    <div class="info__box-right">
+                      <div class="info__box-top">
+                        <div class="info__box-circle">
+                          <svg class="icon-svg icon-team ">
+                            <use xlink:href="./img/sprite.svg#team"></use>
+                          </svg>
+                        </div>
+                      </div>
+                      <div class="info__box-bottom">
+                        <div class="info__box-checked"></div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="info__box info__box-1">
+                    <div class="info__box-left">
+                      <div class="info__box-top">
+                        <p class="info__box-title">Serge Wilfried</p>
+                        <p class="info__box-subtitle">USA - Houston</p>
+                      </div>
+                      <div class="info__box-bottom">
+                        <p class="info__box-mobile">mobile : +1-873-7096</p>
+                      </div>
+                    </div>
+                    <div class="info__box-right">
+                      <div class="info__box-top">
+                        <div class="info__box-circle"><i class="icon-png chat"></i></div>
+                      </div>
+                      <div class="info__box-bottom">
+                        <div class="info__box-checked"></div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="info__box info__box-0">
+                    <div class="info__box-left">
+                      <div class="info__box-top">
+                        <p class="info__box-title">Serge Wilfried</p>
+                        <p class="info__box-subtitle">USA - Houston</p>
+                      </div>
+                      <div class="info__box-bottom">
+                        <p class="info__box-mobile">mobile : +1-873-7096</p>
+                      </div>
+                    </div>
+                    <div class="info__box-right">
+                      <div class="info__box-top">
+                        <div class="info__box-circle">
+                          <svg class="icon-svg icon-team ">
+                            <use xlink:href="./img/sprite.svg#team"></use>
+                          </svg>
+                        </div>
+                      </div>
+                      <div class="info__box-bottom">
+                        <div class="info__box-checked"></div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="info__box info__box-2">
+                    <div class="info__box-left">
+                      <div class="info__box-top">
+                        <p class="info__box-title">Serge Wilfried</p>
+                        <p class="info__box-subtitle">USA - Houston</p>
+                      </div>
+                      <div class="info__box-bottom">
+                        <p class="info__box-mobile">mobile : +1-873-7096</p>
+                      </div>
+                    </div>
+                    <div class="info__box-right">
+                      <div class="info__box-top">
+                        <div class="info__box-circle"><i class="icon-png square"></i></div>
+                      </div>
+                      <div class="info__box-bottom">
+                        <div class="info__box-checked"></div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="info__box info__box-3">
+                    <div class="info__box-left">
+                      <div class="info__box-top">
+                        <p class="info__box-title">Serge Wilfried</p>
+                        <p class="info__box-subtitle">USA - Houston</p>
+                      </div>
+                      <div class="info__box-bottom">
+                        <p class="info__box-mobile">mobile : +1-873-7096</p>
+                      </div>
+                    </div>
+                    <div class="info__box-right">
+                      <div class="info__box-top">
+                        <div class="info__box-circle"><i class="icon-png speaker"></i></div>
+                      </div>
+                      <div class="info__box-bottom">
+                        <div class="info__box-checked"><span>?</span></div>
+                      </div>
+                    </div>
+                  </div>
+                </section>
+                <!-- SECTION INFO :: END-->
+              </div>
+              <div class="section__row-bottom section__info">
+                <div class="section__info-wrapper">
+                  <div>
+                    <svg class="icon-svg icon-logo ">
+                      <use xlink:href="./img/sprite.svg#logo"></use>
+                    </svg>
+                  </div>
+                  <div>
+                    <p class="section__info-title"><span>Get a free transfer</span>
+                      <svg class="icon-svg icon-arrow-lg ">
+                        <use xlink:href="./img/sprite.svg#arrow-lg"></use>
+                      </svg>
+                    </p>
+                    <p class="section__info-description">Share with friends and<br>get your next transfer free</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+      </div>
+    </div>
+  </body>
+  <!-- DETAILS MODAL :: START-->
+  <div class="modal mfp-hide mfp-with-anim" id="personalDetails">
+      <form class="c-form c-form--details" action="" method="" autocomplete="off">
+        <div class="modal__header">
+          <p>personal Details</p>
+        </div>
+        <div class="modal__body">
+          <div class="c-form__group c-form__group--two">
+            <div class="c-form__group-col c-form__group-col-0">
+              <div class="c-form__field c-form__field--input">
+                <label class="c-form__label" for="first_name">first name</label>
+                <div class="c-form__input-wrapper">
+                  <input class="c-form__input" type="text" id="first_name" name="first_name" placeholder="Type your first name" value="" input-js="input-js"/>
+                </div>
+                <div class="c-form__notify">
+                </div>
+              </div>
+            </div>
+            <div class="c-form__group-col c-form__group-col-1">
+              <div class="c-form__field c-form__field--input">
+                <label class="c-form__label" for="last_name">last name</label>
+                <div class="c-form__input-wrapper">
+                  <input class="c-form__input" type="text" id="last_name" name="last_name" placeholder="Type your last name" value="" input-js="input-js"/>
+                </div>
+                <div class="c-form__notify">
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="c-form__group c-form__group--three">
+            <div class="c-form__group-col c-form__group-col-0">
+              <div class="c-form__field c-form__field--select">
+                <label class="c-form__label" for="select_birthday">birthday</label>
+                <div class="c-form__select-wrapper">
+                  <div class="c-form__select-value"></div>
+                  <select class="c-form__select" id="select_birthday" name="select_birthday" select-js="select-js">
+                    <option value="" disabled="disabled" selected="selected" hidden="hidden">Choose your birthday</option>
+                    <option value="Some option 1">Some option 1</option>
+                    <option value="Some option 2">Some option 2</option>
+                    <option value="Some option 3">Some option 3</option>
+                  </select>
+                  <div class="c-form__select-icon"><i></i></div>
+                </div>
+                <div class="c-form__notify">
+                </div>
+              </div>
+            </div>
+            <div class="c-form__group-col c-form__group-col-1">
+              <div class="c-form__field c-form__field--select">
+                <label class="c-form__label" for="select_gender">Gender</label>
+                <div class="c-form__select-wrapper">
+                  <div class="c-form__select-value"></div>
+                  <select class="c-form__select" id="select_gender" name="select_gender" select-js="select-js">
+                    <option value="" disabled="disabled" selected="selected" hidden="hidden">Choose your gender</option>
+                    <option value="Some option 1">Some option 1</option>
+                    <option value="Some option 2">Some option 2</option>
+                    <option value="Some option 3">Some option 3</option>
+                  </select>
+                  <div class="c-form__select-icon"><i></i></div>
+                </div>
+                <div class="c-form__notify">
+                </div>
+              </div>
+            </div>
+            <div class="c-form__group-col c-form__group-col-2">
+              <div class="c-form__field c-form__field--input">
+                <label class="c-form__label" for="mobile_number">mobile number</label>
+                <div class="c-form__input-wrapper">
+                  <input class="c-form__input" type="text" id="mobile_number" name="mobile_number" placeholder="+1 -343-853-7096" value="" input-js="input-js"/>
+                </div>
+                <div class="c-form__notify">
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="c-form__field c-form__field--input">
+            <label class="c-form__label" for="address">address</label>
+            <div class="c-form__input-wrapper">
+              <input class="c-form__input" type="text" id="address" name="address" placeholder="Type your address" value="" input-js="input-js"/>
+            </div>
+            <div class="c-form__notify">
+            </div>
+          </div>
+          <div class="c-form__group c-form__group--two">
+            <div class="c-form__group-col c-form__group-col-0">
+              <div class="c-form__field c-form__field--input">
+                <label class="c-form__label" for="city">city</label>
+                <div class="c-form__input-wrapper">
+                  <input class="c-form__input" type="text" id="city" name="city" placeholder="Type your city" value="" input-js="input-js"/>
+                </div>
+                <div class="c-form__notify">
+                </div>
+              </div>
+            </div>
+            <div class="c-form__group-col c-form__group-col-1">
+              <div class="c-form__field c-form__field--select">
+                <label class="c-form__label" for="select_state">State</label>
+                <div class="c-form__select-wrapper">
+                  <div class="c-form__select-value"></div>
+                  <select class="c-form__select" id="select_state" name="select_state" select-js="select-js">
+                    <option value="" disabled="disabled" selected="selected" hidden="hidden">Choose your state</option>
+                    <option value="Some option 1">Some option 1</option>
+                    <option value="Some option 2">Some option 2</option>
+                    <option value="Some option 3">Some option 3</option>
+                  </select>
+                  <div class="c-form__select-icon"><i></i></div>
+                </div>
+                <div class="c-form__notify">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="modal__footer">
+          <div class="c-form__field c-form__field--btn">
+            <button class="c-form__btn" type="submit">Continue</button>
+          </div>
+        </div>
+      </form>
+  </div>
+  <!-- DETAILS MODAL :: END-->
+  <!-- SCRIPT :: START-->
+  <script src="js/vendor.js"></script>
+  <script src="js/app.js"></script>
+  <!-- SCRIPT :: END-->
+</html>
